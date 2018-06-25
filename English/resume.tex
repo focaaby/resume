@@ -1,0 +1,284 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Jerry}{Wang}{ \urlstyle{same}\href{https://focaaby.github.io/}{focaaby.github.io/}| \href{http://fb.com/focaaby}{fb.com/focaaby}\\
+0926-633005 | \href{mailto:focaaby@gmail.com}{focaaby@gmail.com}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.45\textwidth}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Fubon Financail FinTech Office}
+\descript{| FinTech Intern}
+\location{Sep 2017 – Jan 2018 | Taipei, Taiwan}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Building Decentralized Application with Ethereum and web3j.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{NCNU Department of Information of Management}
+\descript{| System Administrator }
+\location{June 2014 – Sep 2016 | Puli, Taiwan}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Converte all physical machines into virtual machines and migrate into VMware vSphere environment.
+    \item Migrate from an Apache Web Server to Nginx, set up nginx with HTTP/2 and SSL, saved 60\% page-loading time.
+    \item Created a automatic delpoyment CMS(Wordpress or Joomla) script.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Imonology}
+\descript{| Front-End Engineering Intern }
+\location{Jul 2015 – Jun 2016 | Puli, Taiwan}
+\begin{tightemize}
+    \item A Integrated system of monitoring: use jQuery with backend API at the early stage, reactor code with React.js framework.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Project}
+
+\runsubsection{A research of boosting consistency and safety of system in software-defined infrastructure}
+\descript{| Taiwan Stock Exchange Corporation }
+\location{May 2017 – Dec 2017 | Taipei, Taiwan}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Redesign service architectures with microservices on Docker to avoid single point of failure and provide high availability.
+    \item Design a CI/CD workflow to automatic test environment parameters with Ansible script.
+    \item Set up a high throughput architectures with Kafka and Zookeeper cluster on Docker.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{Master of Information Management}
+\descript{National Taiwan University of Science and Technology}
+\location{Grad. Aug 2018 | Taiwan}
+
+\vspace{\topsep}
+\subsection{Bachelor of Information Management}
+\descript{National Chi Nan University}
+\location{Grad. Aug 2016 | Taiwan}
+\sectionsep
+
+\sectionsep
+
+% \subsection{La Martiniere for Boys}
+% \location{Grad. May 2011|  Kolkata, India}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Graduate Thesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Graduate Thesis}
+
+\subsection{Master}
+\descript{On the Design and Implementation a Logging Management System that Satisfying Common Criteria Security Auditing Requirements with the Blockchain Technology}
+\location{Keyword: Common Criteria, security auditing, blockchain, smart contract, Hypereledger}
+
+\vspace{\topsep}
+\subsection{Bachelor}
+\descript{On the Design and Implementation Reaction Mechanisms of a Intrusion Detection and Prevention System in Linux kernel-Level }
+\location{Keywords:Virtual Machine, Virtual Machine Monitor, Intrusion Detection and Prevention System, Linux Kernel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{FrontEnd}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item React.js
+        \item Javascript
+        \item ECMAScript 6
+        \item HTML/CSS/SCSS
+    \end{tightemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{Backend}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Node.js
+    \end{tightemize}
+\end{minipage}
+
+\vspace{\topsep}
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{Operating System}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Ubuntu
+        \item macOS
+    \end{tightemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{Linux}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Shell Script
+        \item Nginx
+        \item Docker
+        \item Ansible
+    \end{tightemize}
+\end{minipage}
+
+\vspace{\topsep}
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{CVS}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Git
+        \item GitHub
+        \item GitLab
+    \end{tightemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{Others}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Word
+        \item Excel
+        \item LaTeX\
+    \end{tightemize}
+\end{minipage}
+
+
+
+
+% \location{Over 5000 lines:}
+%
+% OCaml \textbullet{} Matlab \textbullet{} Rails \textbullet{} \LaTeX\ \\
+% \location{Over 1000 lines:}
+% C \textbullet{} C++ \textbullet{} CSS \textbullet{} PHP \textbullet{} Assembly \\
+% \location{Familiar:}
+% AS3 \textbullet{} iOS \textbullet{} Android \textbullet{} MySQL
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards}
+% \begin{tabular}{rll}
+% 2014	     & top 52/2500  & KPCB Engineering Fellow\\
+% 2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+% 2013	     & National  & Jump Trading Challenge Finalist\\
+% 2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+% 2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+% 2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications}
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
