@@ -92,4 +92,5 @@ sympy-plots-for-*.tex/
 # xindy
 *.xdy
 
-*.xvd
+# XeTeX
+*.xdv
