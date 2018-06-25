@@ -9,6 +9,7 @@ TSWLatexianTemp*
 *.fls
 *.out
 *.toc
+.cache/
 
 ## Intermediate documents:
 *.dvi
