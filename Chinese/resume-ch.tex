@@ -1,0 +1,284 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont-ch}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{王茂林}{ \urlstyle{same}\href{https://focaaby.github.io/}{https://focaaby.github.io}\\
+0926-633005 | \href{mailto:focaaby@gmail.com}{focaaby@gmail.com}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.45\textwidth}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{經歷}
+% \color{title}\rule[-0.5em]{\columnwidth}{1pt}
+% \HRule
+
+\runsubsection{富邦金控創新科技辦公室}
+\descript{| 悍將計畫實習生}
+\location{Sep 2017 – Jan 2018 | Taipei, Taiwan}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item 使用 Ethereum 及 web3j 開發區塊鏈應用程式
+\end{tightemize}
+\sectionsep
+
+\runsubsection{暨南大學資訊管理學系}
+\descript{| 網頁伺服器維護管理員 }
+\location{June 2014 – Sep 2016 | Puli, Taiwan}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item 將 4 台實體機器移植至計算中心 VMware vSphere 環境
+    \item 移植 Apache 網頁伺服器至 Nginx，並設定 HTTP/2 和 SSL，共節省了 60\% 網頁讀取速度
+    \item 建置自動部署 CMS（Wordpress 或 Joomla）腳本
+\end{tightemize}
+\sectionsep
+
+\runsubsection{意門科技}
+\descript{| 前端實習生 }
+\location{Jul 2015 – Jun 2016 | Puli, Taiwan}
+\begin{tightemize}
+    \item 監視系統整合平台：以網頁管理各家監視設備 (IPCAM \& DVR)
+    \item 前期以 jQuery 處理前端技術並採用前後端分離架構
+    \item 後期使用 React.js 框架重構建置 SPA
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{參與專案}
+
+\runsubsection{軟體定義資訊架構下提升應用系統穩定及安全之研究}
+\descript{| 臺灣證券交易所}
+\location{May 2017 – Dec 2017 | Taipei, Taiwan}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item 重新設計架構基於 Docker 容器，並避免於單一脆弱點（SPOF）問題及高可行性（High Availability）
+    \item 設計一個 CI/CD 流程及透過 Ansible 腳本自動測試環境變數
+    \item 基於 Kafka 及 Zookeeper 叢集建置一個高吞吐量架構
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{教育背景}
+
+\subsection{臺灣科技大學}
+\descript{資訊管理研究所}
+\location{Sep 2016 - Aug 2018 | Taiwan}
+
+\vspace{\topsep}
+\subsection{國立暨南國際大學}
+\descript{資訊管理學系}
+\location{Sep 2011 - Aug 2016 | Taiwan}
+\sectionsep
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Graduate Thesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{學術研究}
+
+\subsection{碩士}
+\descript{以區塊鏈實作符合共同準則安全稽核要求的紀錄儲存系統}
+\location{Keyword: Common Criteria, security auditing, blockchain, smart contract, Hypereledger}
+
+\vspace{\topsep}
+\subsection{學士}
+\descript{Linux 核心層級入侵偵測系統反應機制的研究與實作}
+\location{Keywords:Virtual Machine, Virtual Machine Monitor, Intrusion Detection and Prevention System, Linux Kernel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{專業技能}
+
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{前端技術}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item React.js
+        \item Javascript
+        \item ECMAScript 6
+        \item HTML/CSS/SCSS
+    \end{tightemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{後端技術}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Node.js
+    \end{tightemize}
+\end{minipage}
+
+\vspace{\topsep}
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{作業系統}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Ubuntu
+        \item macOS
+    \end{tightemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{Linux}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Shell Script
+        \item Nginx
+        \item Docker
+        \item Ansible
+    \end{tightemize}
+\end{minipage}
+
+\vspace{\topsep}
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{版本控制}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Git
+        \item GitHub
+        \item GitLab
+    \end{tightemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \subsection{文書能力}
+    \vspace{\topsep}
+    \begin{tightemize}
+        \item Word
+        \item Excel
+        \item LaTeX\
+    \end{tightemize}
+\end{minipage}
+
+
+
+
+% \location{Over 5000 lines:}
+%
+% OCaml \textbullet{} Matlab \textbullet{} Rails \textbullet{} \LaTeX\ \\
+% \location{Over 1000 lines:}
+% C \textbullet{} C++ \textbullet{} CSS \textbullet{} PHP \textbullet{} Assembly \\
+% \location{Familiar:}
+% AS3 \textbullet{} iOS \textbullet{} Android \textbullet{} MySQL
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards}
+% \begin{tabular}{rll}
+% 2014	     & top 52/2500  & KPCB Engineering Fellow\\
+% 2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+% 2013	     & National  & Jump Trading Challenge Finalist\\
+% 2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+% 2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+% 2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications}
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
