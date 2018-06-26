@@ -22,7 +22,7 @@
 \definecolor{primary}{HTML}{2b2b2b}
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
-\definecolor{title}{HTML}{1C7BCE}
+\definecolor{title}{HTML}{0D47A1}
 
 % Set main fonts
 \usepackage{fontspec}
@@ -58,7 +58,7 @@ Last Updated on \today
 
 % Headings command
 \titleformat{\section}{\color{title}
-\scshape\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Black}\fontsize{18pt}{36pt}\selectfont \raggedright\uppercase}{}{0em}{}[{\titlerule[1pt]}]
+\scshape\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Black}\fontsize{18pt}{36pt}\selectfont \raggedright\uppercase}{}{0em}{}[{\titlerule[1.25pt]}]
 
 % Subeadings command
 \titleformat{\subsection}{
@@ -77,7 +77,7 @@ Last Updated on \today
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
+\vspace{-\topsep}\begin{itemize}\itemsep1.5pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
 
 \usepackage{xeCJK}
