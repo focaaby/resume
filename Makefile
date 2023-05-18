@@ -7,16 +7,11 @@ RM=rm -f
 
 all: $(MAIN).pdf
 
-$(MAIN).pdf: *.tex 
+$(MAIN).pdf: *.tex
 	$(TEX) -no-pdf $(MAIN)
 	# $(BIBTEX) $(MAIN)
 	# $(TEX) -no-pdf $(MAIN)
 	$(TEX) $(MAIN)
 
 clean:
-	$(RM) *aux *.bbl *.blg *.loa *.lof *.log *.lot *.toc *.xdv *.fdb_latexmk
-
-clean-pdf:
-	$(RM) $(MAIN).pdf
-
-clean-all: clean clean-pdf
+	$(RM) *aux *.bbl *.blg *.loa *.lof *.log *.lot *.toc *.xdv *.fdb_latexmk *.out $(MAIN).pdf

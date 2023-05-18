@@ -22,11 +22,11 @@
 \definecolor{primary}{HTML}{2b2b2b}
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
+\definecolor{title}{HTML}{0D47A1}
 
 % Set main fonts
 \usepackage{fontspec}
-\setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
+\setmainfont[Color=primary, Path = fonts/NotoSansCJKtc/,BoldFont=NotoSansCJKtc-Bold]{NotoSansCJKtc-Regular}
 
 % Date command
 \usepackage[absolute]{textpos}
@@ -34,7 +34,7 @@
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
 \newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
-\color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont
+\color{date}\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Thin}\fontsize{8pt}{10pt}\selectfont
 Last Updated on \today
 \end{textblock}}
 
@@ -52,11 +52,12 @@ Last Updated on \today
 \vspace{-15pt}
 }
 
+
 % Section seperators
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
-\newcommand{\sectionsep}{\vspace{8pt}}
+\newcommand{\sectionsep}{\vspace{6.5pt}}
 
 % Headings command
 \titleformat{\section}{\color{headings}
@@ -64,18 +65,18 @@ Last Updated on \today
 
 % Subeadings command
 \titleformat{\subsection}{
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{subheadings}\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Bold}\fontsize{12pt}{12pt}\selectfont\bfseries}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\color{subheadings}\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Bold} \fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Medium}\fontsize{11pt}{13pt}\selectfont {#1} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\color{headings}\raggedright\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Light}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Thesis name command
 \newcommand{\thesis}[1]{
@@ -87,5 +88,22 @@ Last Updated on \today
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
+\vspace{-\topsep}\begin{itemize}\itemsep1.5pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
+
+% Summary command
+\newenvironment{summary}{%
+   \catcode`\$=12
+   \catcode`\&=12
+   \catcode`\#=12
+   \catcode`\^=12
+   \catcode`\_=12
+   \catcode`\~=12
+   \catcode`\%=12
+}{}
+
+\usepackage{xeCJK}
+\XeTeXlinebreaklocale "zh"         % 這兩行一定要加，中文才能自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt
+\setCJKmainfont [Path = fonts/NotoSansCJKtc/,BoldFont = NotoSansCJKtc-Bold]{NotoSansCJKtc-Regular}
+\newcommand{\mybaselinestretch}{1.4}
