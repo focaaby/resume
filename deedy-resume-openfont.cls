@@ -26,7 +26,8 @@
 
 % Set main fonts
 \usepackage{fontspec}
-\setmainfont[Color=primary, Path = fonts/NotoSansCJKtc/,BoldFont=NotoSansCJKtc-Bold]{NotoSansCJKtc-Regular}
+\setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
 
 % Date command
 \usepackage[absolute]{textpos}
@@ -41,15 +42,15 @@ Last Updated on \today
 % Name command
 \newcommand{\namesection}[3]{
 \centering{
-\fontsize{40pt}{60pt}
+\fontsize{30pt}{45pt}
 \fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1
 \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
 } \\[5pt]
 \centering{
 \color{headings}
 \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
-\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
-\vspace{-15pt}
+% \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
+% \vspace{-15pt}
 }
 
 
@@ -65,18 +66,18 @@ Last Updated on \today
 
 % Subeadings command
 \titleformat{\subsection}{
-\color{subheadings}\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Bold}\fontsize{12pt}{12pt}\selectfont\bfseries}{}{0em}{}
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Bold} \fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-BolIta} \fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Medium}\fontsize{11pt}{13pt}\selectfont {#1} \normalfont}
+\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = fonts/NotoSansCJKtc/]{NotoSansCJKtc-Light}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Light}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Thesis name command
 \newcommand{\thesis}[1]{
