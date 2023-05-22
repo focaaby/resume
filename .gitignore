@@ -10,6 +10,7 @@ TSWLatexianTemp*
 *.out
 *.toc
 .cache/
+*.pdf
 
 ## Intermediate documents:
 *.dvi
