@@ -81,7 +81,7 @@ Last Updated on \today
 
 % Thesis name command
 \newcommand{\thesis}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{10pt}{12pt}\selectfont {#1 \\} \normalfont}
+\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{10pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 % Keywords command
 \newcommand{\keyword}[1]{
