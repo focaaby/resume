@@ -18,14 +18,14 @@ jobs:
           latexmk_use_xelatex: true
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/v')
         with:
           files: |
             resume.pdf
- 
+
       - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Mao-Lin_focaaby_resume
           path: resume.pdf
